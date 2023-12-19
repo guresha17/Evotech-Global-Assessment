@@ -76,17 +76,17 @@ const MainContentComponent: React.FC = () => {
     return (
         <>
             <Row className='main-content-div'>
-                <Col xs={24} style={{ marginBottom : "3%"}}>
+                <Col xs={24}>
                     <Row>
                         <Col xs={16}>
                             <Row>
-                                <Col xs={24} style={{ marginBottom: '7%' }}>
+                                <Col xs={24} style={{ marginBottom: '5%' }}>
                                     <Row className='d-flex'>
                                         {tabsContent.map((tabContent, index) => (
                                             <Col key={index} xs={4} className='d-flex-center'>
                                                 <Row className='d-flex-center tab-item '>
-                                                    <Col xs={24}>
-                                                        <img src={tabContent.icon} alt={tabContent.alt} />
+                                                    <Col xs={24} className='d-flex-container'>
+                                                        <img src={tabContent.icon} alt={tabContent.alt} className='tab-content-icon'/>
                                                     </Col>
                                                     <Col xs={24}>
                                                         <Typography className='tab-text'>{tabContent.text}</Typography>
@@ -99,7 +99,7 @@ const MainContentComponent: React.FC = () => {
                                 <Col xs={24}>
                                     <Row className='d-flex'>
                                         <Col xs={11}>
-                                            <Row style={{ backgroundColor: "#ffffff", borderRadius: "12px", height: "15rem" }}>
+                                            <Row style={{ backgroundColor: "#ffffff", borderRadius: "12px", height: "23.3rem" }}>
                                                 <Col xs={24}>
                                                     <Row className='d-flex categories-div'>
                                                         <Col xs={24} style={{ marginBottom: "7%" }}>
@@ -143,7 +143,7 @@ const MainContentComponent: React.FC = () => {
                                 {tabsContent2.map((tabContent, index) => (
                                     <Col key={index} xs={12} className='d-flex-center' style={{ marginBottom: '7%' }}>
                                         <Row className='d-flex-center tab-item-2'>
-                                            <Col xs={24}>
+                                            <Col xs={24} className='d-flex-container'>
                                                 <img src={tabContent.icon} alt={tabContent.alt} />
                                             </Col>
                                             <Col xs={24}>

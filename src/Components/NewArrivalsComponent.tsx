@@ -6,49 +6,59 @@ const NewArrivalsComponent = () => {
     const newArrivalItems = [
 
         {
-            icon: '/assets/images/Rectangle 172.png',
+            icon: '/assets/images/184-plurk.png',
             alt: 'ftp_icon',
             text: 'Sant Outstanding',
             description: 'FTP: bprow@bnc.cc',
             amount: '$2,000,000',
             paidStatus: 'paid',
-            status: 'Approved'
+            status: 'Approved',
+            backgroundColor: '#EEE5FF',
+            color: '#8950FC'
         },
         {
-            icon: '/assets/images/Rectangle 172 (1).png',
+            icon: '/assets/images/Group.png',
             alt: 'telegram_icon',
             text: 'Telegram Application',
             description: 'FTP: bprow@bnc.cc',
             amount: '$4,600,000',
             paidStatus: 'paid',
-            status: 'In progress'
+            status: 'In progress',
+            backgroundColor: '#FFF4DE',
+            color: '#FFA800'
         },
         {
-            icon: '/assets/images/Rectangle 173.png',
+            icon: '/assets/images/194-puzzle.png',
             alt: 'cisco_icon',
             text: 'Cisco Management',
             description: 'FTP: bprow@bnc.cc',
             amount: '$560,000',
             paidStatus: 'paid',
-            status: 'Success'
+            status: 'Success',
+            backgroundColor: '#C9F7F5',
+            color: '#1BC5BD'
         },
         {
-            icon: '/assets/images/Rectangle 172 (2).png',
+            icon: '/assets/images/182-bebo.png',
             alt: 'hrm_icon',
             text: 'HR Management',
             description: 'FTP: bprow@bnc.cc',
             amount: '$57,000',
             paidStatus: 'paid',
-            status: 'Rejected'
+            status: 'Rejected',
+            backgroundColor: '#FFE2E5',
+            color: '#F64E60'
         },
         {
-            icon: '/assets/images/Rectangle 172 (3).png',
+            icon: '/assets/images/Group (1).png',
             alt: 'ktr_icon',
             text: 'KTR Mobile Application',
             description: 'FTP: bprow@bnc.cc',
             amount: '$45,200,000',
             paidStatus: 'paid',
-            status: 'In Progress'
+            status: 'In Progress',
+            backgroundColor: '#FFF4DE',
+            color: '#FFA800'
         },
     ]
 
@@ -58,7 +68,7 @@ const NewArrivalsComponent = () => {
                 <Col xs={24} style={{ marginBottom: '2%' }}>
                     <Typography className='new-arrivals-text'>New Arrivals</Typography>
                 </Col>
-                <Col xs={24} style={{ marginBottom : '3%'}}>
+                <Col xs={24} style={{ marginBottom: '3%' }}>
                     <Row className='d-flex'>
                         <Col xs={8}>
                             <Typography className='new-arrivals-sub-text'>More than 400+ new members</Typography>
@@ -83,8 +93,8 @@ const NewArrivalsComponent = () => {
                         <Row>
                             <Col xs={10}>
                                 <Row style={{ marginBottom: '5%' }}>
-                                    <Col xs={6}>
-                                        <img src={newArrivalItem.icon} alt={newArrivalItem.alt} />
+                                    <Col xs={6} className='d-flex'>
+                                        <div className='d-flex-center new-arrival-icon-div'> <img src={newArrivalItem.icon} alt={newArrivalItem.alt} style={{ height: '75%', width: '75%' }} /></div>
                                     </Col>
                                     <Col xs={18}>
                                         <Row>
@@ -98,20 +108,20 @@ const NewArrivalsComponent = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={5}>
+                            <Col xs={4}>
                                 <Row>
                                     <Col xs={24}>
-                                        <Typography>{newArrivalItem.amount}</Typography>
+                                        <Typography className='amount-text'>{newArrivalItem.amount}</Typography>
                                     </Col>
                                     <Col xs={24}>
-                                        <Typography>{newArrivalItem.paidStatus}</Typography>
+                                        <Typography className='paid-text'>{newArrivalItem.paidStatus}</Typography>
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={4}>
-                                <Button>{newArrivalItem.status}</Button>
+                            <Col xs={4} style={{ display : "flex", justifyContent : "flex-end"}}>
+                                <Button style={{ backgroundColor: newArrivalItem.backgroundColor, color: newArrivalItem.color, border: 'none' }}>{newArrivalItem.status}</Button>
                             </Col>
-                            <Col xs={5}>
+                            <Col xs={6}>
                                 <Row className='d-flex'>
                                     <Col xs={7}>
                                         <img src='/assets/images/Button Settings.png' alt='settings_icon' />

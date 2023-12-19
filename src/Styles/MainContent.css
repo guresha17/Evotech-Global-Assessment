@@ -35,10 +35,35 @@
     height: 10rem;
 }
 
+.tab-item-active {
+    background-color: #50CD89;
+}
+
+.tab-item:hover {
+    background-color: #50CD89;
+}
+
+.tab-item:active {
+    background-color: #50CD89;
+}
+
+.tab-content-icon {
+    background-color: #ffffff;
+}
+
+.tab-content-icon:hover {
+    background-color: #50CD89;
+}
+
+.tab-content-icon:active {
+    background-color: #50CD89;
+}
+
 .tab-item-2 {
     background-color: #ffffff;
     border-radius: 12px;
-    height: 7rem;
+    height: 10.8rem;
+    width: 75%;
 }
 
 .tab-text {
@@ -49,7 +74,7 @@
     background-color: #F64E60;
     border-radius: 12px;
     padding: 12px;
-    height: 10rem;
+    height: 15rem;
 }
 
 .select-comp .ant-select-selector {
@@ -143,4 +168,31 @@
 .cart-image {
     width: 90%;
     height: 90%;
+}
+
+.new-arrival-icon-div {
+    height: 48px;
+    width: 48px;
+    background-color: #F3F6F9;
+    border-radius: 6px;
+}
+
+.d-flex-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.amount-text {
+    text-align: end;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 21px;
+    color: #464E5F;
+}
+
+.paid-text {
+    text-align: end;
+    font-size: 13px;
+    color: #B5B5C3;
 }
