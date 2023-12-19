@@ -46,12 +46,12 @@ const DashboardComponent: React.FC = () => {
             <Row className='dashboard-main'>
                 <Col xs={24}>
                     <Row className='d-flex dashboard-header'>
-                        <Col xs={20} className='d-flex-container-center'>
+                        <Col xs={20} className='d-flex-container-center' style={{ padding : "12px"}}>
                             {collapsed ? <></>
                                 : <Typography className='dashboard-text'>DASHBOARD</Typography>}
                         </Col>
                         <Col xs={4} className='d-flex-container-center'>
-                            <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }} className='dashboard-collapse-button'>
+                            <Button type="primary" onClick={toggleCollapsed} className='dashboard-collapse-button d-flex-container-center'>
                                 <img src='/assets/images/Arrow-double-left-active.png' alt='collapse-arrow-image' />
                             </Button>
                         </Col>
