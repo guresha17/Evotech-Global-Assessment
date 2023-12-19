@@ -46,11 +46,11 @@ const DashboardComponent: React.FC = () => {
             <Row className='dashboard-main'>
                 <Col xs={24}>
                     <Row className='d-flex dashboard-header'>
-                        <Col xs={20}>
+                        <Col xs={20} className='d-flex-container-center'>
                             {collapsed ? <></>
                                 : <Typography className='dashboard-text'>DASHBOARD</Typography>}
                         </Col>
-                        <Col xs={4}>
+                        <Col xs={4} className='d-flex-container-center'>
                             <Button type="primary" onClick={toggleCollapsed} style={{ marginBottom: 16 }} className='dashboard-collapse-button'>
                                 <img src='/assets/images/Arrow-double-left-active.png' alt='collapse-arrow-image' />
                             </Button>
@@ -61,18 +61,16 @@ const DashboardComponent: React.FC = () => {
                 </Col>
                 <Col xs={24}>
                     <Row className='d-flex dashboard-header'>
-                        <Col xs={4}>
+                        <Col xs={4} className='d-flex-container-center'>
                             <img src='/assets/images/Layers.png' alt='layers-image' />
                         </Col>
-                        <Col xs={20}>
+                        <Col xs={20} className='d-flex-container-center'>
                             <Typography className='dashboard-sub-text'>Dashboard</Typography>
                         </Col>
                     </Row>
                 </Col>
-                <Col xs={24}>
-                    <Row className='d-flex custom-text-div'>
+                <Col xs={24} className='d-flex-container-center custom-text-div'>
                         <Typography className='custom-text'>CUSTOM</Typography>
-                    </Row>
                 </Col>
                 <Col xs={24}>
                     <Menu

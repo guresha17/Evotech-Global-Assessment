@@ -53,8 +53,9 @@
 
 .custom-text{
     color: #4A4B68;
-    font-size: 12px;
+    font-size: 17px;
     line-height: 20px;
+    text-align: center;
 }
 
 .custom-text-div{
@@ -63,7 +64,8 @@
     align-self: center;
 }
 
-
-
-
-
+.d-flex-container-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
