@@ -75,6 +75,7 @@ const DashboardComponent: React.FC = () => {
                 <Col xs={24}>
                     <Menu
                         className='dashboard-main dashboard-menu-text'
+                        style={{ height : "100vh"}}
                         defaultSelectedKeys={['1']}
                         defaultOpenKeys={['sub1']}
                         mode="inline"
