@@ -41,10 +41,10 @@ const HeaderComponent: React.FC = () => {
             <Row className='header-main'>
                 <Col xs={24}>
                     <Row>
-                        <Col xs={15} md={9}  lg={12} xl={15}>
+                        <Col xs={9} md={9}  lg={12} xl={15}>
 
                         </Col>
-                        <Col xs={9} md={15}  lg={12} xl={9}>
+                        <Col xs={15} md={15}  lg={12} xl={9}>
                             <Row className='d-flex'>
                                 {headerIcons.map((headerIcon, index) => (
                                     <Col key={index} xs={2} className='d-flex-center'>
@@ -63,7 +63,7 @@ const HeaderComponent: React.FC = () => {
                 </Col>
                 <Col xs={24}>
                     <Row>
-                        <Col xs={6} md={8} lg={7} xl={6}>
+                        <Col xs={8} md={8} lg={7} xl={6}>
                             <Row>
                                 <Col xs={12} className='d-flex-center'>
                                     <Typography>Dashboard</Typography>
@@ -73,10 +73,10 @@ const HeaderComponent: React.FC = () => {
                                 </Col>
                             </Row>
                         </Col>
-                        <Col xs={6} md={1} lg={6} xl={9}>
+                        <Col xs={1} md={1} lg={6} xl={9}>
 
                         </Col>
-                        <Col xs={9} md={15} lg={11} xl={9}>
+                        <Col xs={15} md={15} lg={11} xl={9}>
                             <Row className='d-flex'>
                                 <Col xs={2}>
                                     <Button className='button-style'>Today</Button>

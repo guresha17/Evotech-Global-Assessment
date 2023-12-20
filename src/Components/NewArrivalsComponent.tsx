@@ -118,10 +118,10 @@ const NewArrivalsComponent = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={4} md={5} lg={5} xl={4} style={{ display : "flex", justifyContent : "flex-end"}}>
+                            <Col xs={5} md={5} lg={5} xl={4} style={{ display : "flex", justifyContent : "flex-end"}}>
                                 <Button style={{ backgroundColor: newArrivalItem.backgroundColor, color: newArrivalItem.color, border: 'none' }}>{newArrivalItem.status}</Button>
                             </Col>
-                            <Col xs={6} md={5} lg={5} xl={6}>
+                            <Col xs={5} md={5} lg={5} xl={6}>
                                 <Row className='d-flex'>
                                     <Col xs={7}>
                                         <img src='/assets/images/Button Settings.png' alt='settings_icon' />

@@ -14,10 +14,10 @@ const StatsComponent = () => {
         </Col>
         <Col xs={24} style={{ marginBottom: '3%' }}>
           <Row className='d-flex'>
-            <Col xs={8} md={9} lg={9} xl={8}>
+            <Col xs={9} md={9} lg={9} xl={8}>
               <Typography className='new-arrivals-sub-text'>More than 400+ new members</Typography>
             </Col>
-            <Col xs={11} md={15} lg={15} xl={11}>
+            <Col xs={15} md={15} lg={15} xl={11}>
               <Row className='d-flex'>
                 <Col xs={3}>
                   <Button className='new-arrival-button'>Month</Button>
