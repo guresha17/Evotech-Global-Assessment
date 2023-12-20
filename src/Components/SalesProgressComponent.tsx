@@ -1,7 +1,7 @@
 import { Col, Row, Typography } from 'antd'
 import React from 'react'
 
-const SalesProgressComponent = () => {
+const SalesProgressComponent : React.FC = () => {
 
 
     const salesProgressItems = [

@@ -1,7 +1,7 @@
 import { Button, Col, Row, Typography } from 'antd'
 import React from 'react'
 
-const NewArrivalsComponent = () => {
+const NewArrivalsComponent : React.FC = () => {
 
     const newArrivalItems = [
 

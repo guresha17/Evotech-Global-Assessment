@@ -3,7 +3,7 @@ import '../Styles/MainContent.css';
 import { Col, Row, Typography, Steps } from 'antd';
 
 
-const TrackingComponent = () => {
+const TrackingComponent: React.FC = () => {
     const trackingItems = [
         {
             title: '8:42',

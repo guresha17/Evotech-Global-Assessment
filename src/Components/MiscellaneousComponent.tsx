@@ -1,7 +1,7 @@
 import { Col, Row, Typography } from 'antd'
 import React from 'react'
 
-const MiscellaneousComponent = () => {
+const MiscellaneousComponent : React.FC = () => {
 
     const miscelleneousItems = [
         {

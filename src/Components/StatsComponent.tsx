@@ -5,7 +5,7 @@ import ClusteredColumnChart from './ClusteredColumnChart';
 
 
 
-const StatsComponent = () => {
+const StatsComponent: React.FC = () => {
   return (
     <>
       <Row style={{ padding: '15px', backgroundColor: '#ffffff', borderRadius: '12px' }}>
