@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Col, Row, Typography } from 'antd';
 import { Column } from '@ant-design/charts';
-// import ClusteredColumnChart from './ClusteredColumnChart';
+import ClusteredColumnChart from './ClusteredColumnChart';
 
 
 
@@ -31,7 +31,7 @@ const StatsComponent = () => {
               </Row>
             </Col>
             <Col xs={24} style={{ marginTop: '3%' }}>
-              {/* <ClusteredColumnChart /> */}
+              <ClusteredColumnChart />
             </Col>
           </Row>
         </Col>

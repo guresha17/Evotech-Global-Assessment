@@ -170,7 +170,7 @@ const MainContentComponent: React.FC = () => {
                 <Col xs={24}  style={{ marginBottom : "3%"}}>
                     <Row className='d-flex'>
                         <Col xs={16}>
-                            {/* <StatsComponent /> */}
+                            <StatsComponent />
                         </Col>
                         <Col xs={7}>
                             <MiscellaneousComponent />
