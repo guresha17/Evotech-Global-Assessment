@@ -35,6 +35,11 @@
     height: 10rem;
 }
 
+.tab-item.activeTab {
+    background-color: #50CD89;
+    color: #ffffff;
+}
+
 .tab-item-active {
     background-color: #50CD89;
 }
@@ -49,6 +54,10 @@
 
 .tab-content-icon {
     background-color: #ffffff;
+}
+
+.tab-content-icon.activeImage {
+    background-color: #50CD89;
 }
 
 .tab-content-icon:hover {
@@ -197,6 +206,12 @@
     font-size: 13px;
     color: #B5B5C3;
 }
+
+.new-arrival-button.activeButton {
+    background-color: #000000;
+    color: #ffffff;
+}
+
 
 @media only screen and (min-width : 768px) and (max-width : 1023px) {
 

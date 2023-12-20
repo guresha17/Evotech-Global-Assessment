@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Button, Col, Row, Typography } from 'antd';
 import { Column } from '@ant-design/charts';
 import ClusteredColumnChart from './ClusteredColumnChart';
@@ -6,6 +6,9 @@ import ClusteredColumnChart from './ClusteredColumnChart';
 
 
 const StatsComponent: React.FC = () => {
+
+  const [activeButton, setActiveButton] = useState('Day');
+
   return (
     <>
       <Row style={{ padding: '15px', backgroundColor: '#ffffff', borderRadius: '12px' }}>
@@ -19,14 +22,23 @@ const StatsComponent: React.FC = () => {
             </Col>
             <Col xs={15} md={15} lg={15} xl={11}>
               <Row className='d-flex'>
-                <Col xs={3}>
-                  <Button className='new-arrival-button'>Month</Button>
+                <Col xs={5}>
+                  <Button
+                    className={`new-arrival-button ${activeButton === 'Month' ? 'activeButton' : ''}`}
+                    onClick={() => setActiveButton('Month')}
+                  >Month</Button>
                 </Col>
-                <Col xs={3}>
-                  <Button className='new-arrival-button'>Week</Button>
+                <Col xs={5}>
+                  <Button
+                    className={`new-arrival-button ${activeButton === 'Week' ? 'activeButton' : ''}`}
+                    onClick={() => setActiveButton('Week')}
+                  >Month</Button>
                 </Col>
-                <Col xs={3}>
-                  <Button className='new-arrival-button'>Day</Button>
+                <Col xs={5}>
+                  <Button
+                    className={`new-arrival-button ${activeButton === 'Day' ? 'activeButton' : ''}`}
+                    onClick={() => setActiveButton('Day')}
+                  >Month</Button>
                 </Col>
               </Row>
             </Col>

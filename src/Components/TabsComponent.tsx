@@ -1,7 +1,13 @@
 import { Col, Row, Typography } from 'antd'
-import React from 'react'
+import React, { useState } from 'react'
 
 const TabsComponent: React.FC = () => {
+
+    const [activeTab, setActiveTab] = useState('Video Tutorials');
+    const [activeImage, setActiveImage] = useState('/assets/images/Movie-lane.png');
+
+
+
 
     const tabsContent = [
 
@@ -39,12 +45,16 @@ const TabsComponent: React.FC = () => {
             <Row className='d-flex'>
                 {tabsContent.map((tabContent, index) => (
                     <Col key={index} xs={4} className='d-flex-center'>
-                        <Row className='d-flex-center tab-item '>
+                        <Row
+                            className={`d-flex-center tab-item ${activeTab === tabContent.text ? 'activeTab' : ''}`}
+                        >
                             <Col xs={24} className='d-flex-container'>
-                                <img src={tabContent.icon} alt={tabContent.alt} className='tab-content-icon' />
+                                <img src={tabContent.icon} alt={tabContent.alt}
+                                    className={`tab-content-icon ${activeImage === tabContent.icon ? 'activeImage' : ''}`}
+                                    onClick={() => setActiveImage(tabContent.icon)} />
                             </Col>
                             <Col xs={24}>
-                                <Typography className='tab-text'>{tabContent.text}</Typography>
+                                <Typography className='tab-text' onClick={() => setActiveTab(tabContent.text)}>{tabContent.text}</Typography>
                             </Col>
                         </Row>
                     </Col>

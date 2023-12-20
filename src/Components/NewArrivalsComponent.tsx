@@ -1,7 +1,10 @@
 import { Button, Col, Row, Typography } from 'antd'
-import React from 'react'
+import React, { useState } from 'react'
 
-const NewArrivalsComponent : React.FC = () => {
+const NewArrivalsComponent: React.FC = () => {
+
+    const [activeButton, setActiveButton] = useState('Day');
+
 
     const newArrivalItems = [
 
@@ -75,14 +78,23 @@ const NewArrivalsComponent : React.FC = () => {
                         </Col>
                         <Col xs={11} md={15} lg={11} xl={11}>
                             <Row className='d-flex'>
-                                <Col xs={3}>
-                                    <Button className='new-arrival-button'>Month</Button>
+                                <Col xs={4}>
+                                    <Button
+                                        className={`new-arrival-button ${activeButton === 'Month' ? 'activeButton' : ''}`}
+                                        onClick={() => setActiveButton('Month')}
+                                    >Month</Button>
                                 </Col>
-                                <Col xs={3}>
-                                    <Button className='new-arrival-button'>Week</Button>
+                                <Col xs={4}>
+                                    <Button
+                                        className={`new-arrival-button ${activeButton === 'Week' ? 'activeButton' : ''}`}
+                                        onClick={() => setActiveButton('Week')}
+                                    >Week</Button>
                                 </Col>
-                                <Col xs={3}>
-                                    <Button className='new-arrival-button'>Day</Button>
+                                <Col xs={4}>
+                                    <Button
+                                        className={`new-arrival-button ${activeButton === 'Day' ? 'activeButton' : ''}`}
+                                        onClick={() => setActiveButton('Day')}
+                                    >Day</Button>
                                 </Col>
                             </Row>
                         </Col>
@@ -118,7 +130,7 @@ const NewArrivalsComponent : React.FC = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={5} md={5} lg={5} xl={4} style={{ display : "flex", justifyContent : "flex-end"}}>
+                            <Col xs={5} md={5} lg={5} xl={4} style={{ display: "flex", justifyContent: "flex-end" }}>
                                 <Button style={{ backgroundColor: newArrivalItem.backgroundColor, color: newArrivalItem.color, border: 'none' }}>{newArrivalItem.status}</Button>
                             </Col>
                             <Col xs={5} md={5} lg={5} xl={6}>
