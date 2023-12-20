@@ -90,9 +90,9 @@ const NewArrivalsComponent = () => {
                 </Col>
                 <Col xs={24}>
                     {newArrivalItems.map((newArrivalItem, index) => (
-                        <Row>
-                            <Col xs={10}>
-                                <Row style={{ marginBottom: '5%' }}>
+                        <Row justify={'space-between'}>
+                            <Col xs={10} md={10} lg={10} xl={10}>
+                                <Row style={{ marginBottom: '5%' }} justify={'start'}>
                                     <Col xs={6} className='d-flex'>
                                         <div className='d-flex-center new-arrival-icon-div'> <img src={newArrivalItem.icon} alt={newArrivalItem.alt} style={{ height: '75%', width: '75%' }} /></div>
                                     </Col>
@@ -118,10 +118,10 @@ const NewArrivalsComponent = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={4} style={{ display : "flex", justifyContent : "flex-end"}}>
+                            <Col xs={4} md={5} lg={5} xl={4} style={{ display : "flex", justifyContent : "flex-end"}}>
                                 <Button style={{ backgroundColor: newArrivalItem.backgroundColor, color: newArrivalItem.color, border: 'none' }}>{newArrivalItem.status}</Button>
                             </Col>
-                            <Col xs={6} md={5} lg={6} xl={6}>
+                            <Col xs={6} md={5} lg={5} xl={6}>
                                 <Row className='d-flex'>
                                     <Col xs={7}>
                                         <img src='/assets/images/Button Settings.png' alt='settings_icon' />
