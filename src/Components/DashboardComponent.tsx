@@ -10,25 +10,27 @@ type MenuItem = Required<MenuProps>['items'][number];
 function getItem(
     label: React.ReactNode,
     key: React.Key,
-    // icon?: React.ReactNode,
+    icon?: React.ReactNode,
     children?: MenuItem[],
     type?: 'group',
+    style?: React.CSSProperties,
 ): MenuItem {
     return {
         key,
-        // icon,
+        icon,
         children,
         label,
         type,
+        style,
     } as MenuItem;
 }
 
 const items: MenuItem[] = [
-    getItem('Applications', 'sub2', [
-        getItem('-  Users', 'sub3', [getItem('Option 11', '11'), getItem('Option 12', '12')]),
-        getItem('-  Contacts', 'sub4', [getItem('Option 13', '13'), getItem('Option 14', '14')]),
-        getItem('-  Chat', 'sub5', [getItem('Option 15', '15'), getItem('Option 16', '16')]),
-        getItem('-  Pages', 'sub6', [getItem('Option 17', '17'), getItem('Option 18', '18')]),
+    getItem('Applications', 'sub2', <img src='/assets/images/Layout 4 blocks.png' alt='' />, [
+        getItem('-  Users', 'sub3', null, [getItem('Option 11', '11'), getItem('Option 12', '12')]),
+        getItem('-  Contacts', 'sub4', null, [getItem('Option 13', '13'), getItem('Option 14', '14')]),
+        getItem('-  Chat', 'sub5', null, [getItem('Option 15', '15'), getItem('Option 16', '16')]),
+        getItem('-  Pages', 'sub6', null, [getItem('Option 17', '17'), getItem('Option 18', '18')]),
     ]),
 ];
 
@@ -46,12 +48,11 @@ const DashboardComponent: React.FC = () => {
             <Row className='dashboard-main'>
                 <Col xs={24}>
                     <Row className='d-flex dashboard-header'>
-                        <Col xs={20} className='d-flex-container-center' style={{ padding : "12px"}}>
-                            {collapsed ? <></>
-                                : <Typography className='dashboard-text'>DASHBOARD</Typography>}
+                        <Col xs={20} md={19} lg={19} xl={20} className='d-flex-container-center' style={{ padding: "12px" }}>
+                            <Typography className='dashboard-text'>DASHBOARD</Typography>
                         </Col>
-                        <Col xs={4} className='d-flex-container-center'>
-                            <Button type="primary" onClick={toggleCollapsed} className='dashboard-collapse-button d-flex-container-center'>
+                        <Col xs={4} md={5} lg={5} xl={4} className='d-flex-container-center'>
+                            <Button type="primary" className='dashboard-collapse-button d-flex-container-center'>
                                 <img src='/assets/images/Arrow-double-left-active.png' alt='collapse-arrow-image' />
                             </Button>
                         </Col>
@@ -70,18 +71,26 @@ const DashboardComponent: React.FC = () => {
                     </Row>
                 </Col>
                 <Col xs={24} className='d-flex-container-center custom-text-div'>
-                        <Typography className='custom-text'>CUSTOM</Typography>
+                    <Typography className='custom-text'>CUSTOM</Typography>
                 </Col>
                 <Col xs={24}>
                     <Menu
                         className='dashboard-main dashboard-menu-text'
-                        style={{ height : "100vh"}}
+                        style={{ height: "100vh", paddingLeft: '0' }}
                         defaultSelectedKeys={['1']}
                         defaultOpenKeys={['sub1']}
                         mode="inline"
                         inlineCollapsed={collapsed}
                         items={items}
-                    />
+                    >
+                        {items.map((item: any) => (
+                            <Menu.Item key="sub2" style={{ fontSize: '14px', paddingLeft: "12px" }}>
+                                <img src='/assets/images/Layout 4 blocks.png' alt='' />
+                                <span>Applications</span>
+                            </Menu.Item>
+                        ))}
+
+                    </Menu>
                 </Col>
             </Row>
         </>
