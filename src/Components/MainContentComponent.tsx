@@ -78,7 +78,7 @@ const MainContentComponent: React.FC = () => {
             <Row className='main-content-div'>
                 <Col xs={24}>
                     <Row>
-                        <Col xs={16}>
+                        <Col xs={16} md={24} lg={16} xl={16}>
                             <Row>
                                 <Col xs={24} style={{ marginBottom: '5%' }}>
                                     <Row className='d-flex'>
@@ -96,7 +96,7 @@ const MainContentComponent: React.FC = () => {
                                         ))}
                                     </Row>
                                 </Col>
-                                <Col xs={24}>
+                                <Col xs={24} className='mb'>
                                     <Row className='d-flex'>
                                         <Col xs={11}>
                                             <Row style={{ backgroundColor: "#ffffff", borderRadius: "12px", height: "23.3rem" }}>
@@ -104,10 +104,10 @@ const MainContentComponent: React.FC = () => {
                                                     <Row className='d-flex categories-div'>
                                                         <Col xs={24} style={{ marginBottom: "7%" }}>
                                                             <Row className='d-flex'>
-                                                                <Col xs={6}>
+                                                                <Col xs={6} md={9}>
                                                                     <Typography className='font-white'>Categories</Typography>
                                                                 </Col>
-                                                                <Col xs={6}>
+                                                                <Col xs={6} md={9}>
                                                                     <Select
                                                                         defaultValue="export"
                                                                         className='select-comp'
@@ -138,10 +138,10 @@ const MainContentComponent: React.FC = () => {
                             </Row>
 
                         </Col>
-                        <Col xs={8}>
+                        <Col xs={8} md={24} lg={8} xl={8}>
                             <Row className='d-flex'>
                                 {tabsContent2.map((tabContent, index) => (
-                                    <Col key={index} xs={12} className='d-flex-center' style={{ marginBottom: '7%' }}>
+                                    <Col key={index} xs={12} md={8} lg={12} xl={12} className='d-flex-center' style={{ marginBottom: '7%' }}>
                                         <Row className='d-flex-center tab-item-2'>
                                             <Col xs={24} className='d-flex-container'>
                                                 <img src={tabContent.icon} alt={tabContent.alt} />
@@ -157,22 +157,22 @@ const MainContentComponent: React.FC = () => {
                     </Row>
 
                 </Col>
-                <Col xs={24}  style={{ marginBottom : "3%"}}>
+                <Col xs={24}>
                     <Row className='d-flex'>
-                        <Col xs={7}>
+                        <Col xs={7} md={24} lg={7} xl={7} className='mb'>
                             <SalesProgressComponent />
                         </Col>
-                        <Col xs={16}>
+                        <Col xs={16} md={24} lg={16} xl={16} className='mb'>
                             <NewArrivalsComponent />
                         </Col>
                     </Row>
                 </Col>
-                <Col xs={24}  style={{ marginBottom : "3%"}}>
+                <Col xs={24}>
                     <Row className='d-flex'>
-                        <Col xs={16}>
+                        <Col xs={16} md={24} lg={16} xl={16} className='mb'>
                             <StatsComponent />
                         </Col>
-                        <Col xs={7}>
+                        <Col xs={7} md={24} lg={7} xl={7} className='mb'>
                             <MiscellaneousComponent />
                         </Col>
                     </Row>

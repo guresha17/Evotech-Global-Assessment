@@ -27,7 +27,7 @@ const MiscellaneousComponent = () => {
                 <Col xs={24}>
                     <Row className='d-flex'>
                         {miscelleneousItems.map((miscellaneousItem, index) => (
-                            <Col key={index} xs={12} className='d-flex-center' style={{ marginBottom: '7%' }}>
+                            <Col key={index} xs={12} md={6} lg={12} xl={12} className='d-flex-center' style={{ marginBottom: '7%' }}>
                                 <Row className='d-flex-center'>
                                     <img src={miscellaneousItem.src} alt={miscellaneousItem.alt} className='cart-image' />
                                 </Row>

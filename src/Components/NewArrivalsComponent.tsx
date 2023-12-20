@@ -70,10 +70,10 @@ const NewArrivalsComponent = () => {
                 </Col>
                 <Col xs={24} style={{ marginBottom: '3%' }}>
                     <Row className='d-flex'>
-                        <Col xs={8}>
+                        <Col xs={8} md={9} lg={8} xl={8}>
                             <Typography className='new-arrivals-sub-text'>More than 400+ new members</Typography>
                         </Col>
-                        <Col xs={11}>
+                        <Col xs={11} md={15} lg={11} xl={11}>
                             <Row className='d-flex'>
                                 <Col xs={3}>
                                     <Button className='new-arrival-button'>Month</Button>
@@ -108,7 +108,7 @@ const NewArrivalsComponent = () => {
                                     </Col>
                                 </Row>
                             </Col>
-                            <Col xs={4}>
+                            <Col xs={4} >
                                 <Row>
                                     <Col xs={24}>
                                         <Typography className='amount-text'>{newArrivalItem.amount}</Typography>
@@ -121,7 +121,7 @@ const NewArrivalsComponent = () => {
                             <Col xs={4} style={{ display : "flex", justifyContent : "flex-end"}}>
                                 <Button style={{ backgroundColor: newArrivalItem.backgroundColor, color: newArrivalItem.color, border: 'none' }}>{newArrivalItem.status}</Button>
                             </Col>
-                            <Col xs={6}>
+                            <Col xs={6} md={5} lg={6} xl={6}>
                                 <Row className='d-flex'>
                                     <Col xs={7}>
                                         <img src='/assets/images/Button Settings.png' alt='settings_icon' />
